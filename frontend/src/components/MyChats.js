@@ -15,6 +15,7 @@ import { ChatState } from "../context/ChatProvider";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import ChatLoading from "./miscellaneous/ChatLoading";
 import { getSender } from "../config/chatLogic";
+import GroupChatModal from "./miscellaneous/GroupChatModal";
 
 const MyChats = () => {
   const [loggedUser, setLoggedUser] = useState();
@@ -73,7 +74,9 @@ const MyChats = () => {
               alignItems: "center",
             }}
           >
+           
             My Chats
+             <GroupChatModal>
             <Button
               variant="subtle"
               radius={100}
@@ -81,6 +84,7 @@ const MyChats = () => {
             >
               New Group
             </Button>
+            </GroupChatModal>
           </Box>
           <Box
             style={{
